@@ -1,0 +1,19 @@
+public int scoresSpecial(int[] a, int[] b) {
+
+  int maxA = scoresSpecial(a);
+  int maxB = scoresSpecial(b);
+
+  return maxA + maxB;
+}
+
+public int scoresSpecial(int scores[]) {
+  int max = 0;
+
+  for (int i = 0; i < scores.length; i++) {
+    if (scores[i] % 10 == 0) {
+      max = Math.max(max, scores[i]);
+    }
+  }
+
+  return max;
+}
