@@ -1,0 +1,22 @@
+public String[] wordsWithout(String[] words, String target) {
+  int len = 0;
+
+  for (int i = 0; i < words.length; i ++) {
+    if (words[i] != target) {
+      len++;
+    }
+  }
+
+  int count = 0;
+
+  String[] result = new String[len];
+  
+  for (int j = 0; j < words.length; j ++) {
+    if (words[j] != target) {
+      result[count] = words[j];
+      count++;
+    }
+  }
+
+  return result;
+}
